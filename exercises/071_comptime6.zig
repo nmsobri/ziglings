@@ -29,7 +29,8 @@ const Narcissus = struct {
 };
 
 pub fn main() void {
-    var narcissus: Narcissus = Narcissus {};
+    var narcissus: Narcissus = Narcissus{};
+    _ = narcissus;
 
     print("Narcissus has room in his heart for:", .{});
 
@@ -42,7 +43,7 @@ pub fn main() void {
 
     const fields = @typeInfo(Narcissus).Struct.fields;
 
-    ??? {
+    inline for (fields) |field| {
         if (field.field_type != void) {
             print(" {s}", .{field.name});
         }

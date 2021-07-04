@@ -33,6 +33,7 @@ const Class = enum {
 // Please add a new property to this struct called "health" and make
 // it a u8 integer type.
 const Character = struct {
+    health: u8 = 100,
     class: Class,
     gold: u32,
     experience: u32,

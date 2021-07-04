@@ -28,11 +28,11 @@ pub fn main() void {
     for (nums) |num| {
         std.debug.print("{}", .{num});
 
-        var n = numberMaybeFail(num);
-        if (n) |value| {
+        if (numberMaybeFail(num)) |_| {
             std.debug.print("=4. ", .{});
         } else |err| switch (err) {
             MyNumberError.TooBig => std.debug.print(">4. ", .{}),
+            MyNumberError.TooSmall => std.debug.print("<4. ", .{}),
             // Please add a match for TooSmall here and have it print: "<4. "
         }
     }

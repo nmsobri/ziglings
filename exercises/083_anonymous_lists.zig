@@ -3,6 +3,7 @@
 // "anonymous list" with an array type destination:
 //
 //     const foo: [3]u32 = .{10, 20, 30};
+const foo: [3]u32 = [3]u32{ 10, 20, 30 };
 //
 // Otherwise it's a "tuple":
 //
@@ -20,6 +21,6 @@ pub fn main() void {
     //
     //     = .{'h', 'e', 'l', 'l', 'o'};
     //
-    const hello = .{'h', 'e', 'l', 'l', 'o'};
+    const hello: [5]u8 = .{ 'h', 'e', 'l', 'l', 'o' };
     print("I say {s}!\n", .{hello});
 }

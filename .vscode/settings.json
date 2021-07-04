@@ -1,0 +1,14 @@
+{
+	"gotoSymbolStack.currentStackPosition": 0,
+	"gotoSymbolStack.maxStackPosition": 1,
+	"gotoSymbolStack.filePositionInfo": [
+		{
+			"textFile": "c:\\Users\\slier\\Desktop\\Ziglings\\exercises\\058_quiz7.zig",
+			"viewColumn": 1,
+			"textPosition": {
+				"line": 406,
+				"character": 18
+			}
+		}
+	]
+}

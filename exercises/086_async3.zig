@@ -11,9 +11,12 @@ const print = @import("std").debug.print;
 
 pub fn main() void {
     const n = 5;
-    var foo_frame = async foo(n);
-
-    ???
+    var foo_frame = async foo(n); //5
+    resume foo_frame; // 4
+    resume foo_frame; // 3
+    resume foo_frame; // 2
+    resume foo_frame; // 1
+    resume foo_frame; // 0
 
     print("\n", .{});
 }
